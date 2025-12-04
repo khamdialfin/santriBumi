@@ -83,14 +83,10 @@
 </style>
 
 <body>
-    <div style="
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('demiMasa.png') center/cover no-repeat;
-    z-index: -1;
-  "></div>
-    <section>
+
+    <body>
+
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
             <div class="container">
                 <img src="santribuminav.png" width="200" alt="logo" class="img-fluid" />
@@ -108,70 +104,95 @@
                 </div>
             </div>
         </nav>
-    </section>
-    <div class="container mt-5 pt-5">
-        <section class="py-5" style="position: relative; z-index: 2;" id="about">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto text-center">
-                        <!-- Judul Besar -->
-                        <h1 class="display-4 fw-bold mb-4" style="
+
+        <!-- SECTION HERO -->
+        <section id="hero" style="
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    ">
+            <!-- Background Gambar -->
+            <div style="
+            position: absolute;
+            inset: 0;
+            background: url('bgDemi.png') center/cover no-repeat;
+            z-index: -1;
+        "></div>
+
+            <!-- Konten Tengah -->
+            <div
+                class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
+                <img src="logoDemi.png" alt="Logo Tengah" class="img-fluid mb-4" style="width: 280px; max-width: 80%;">
+            </div>
+        </section>
+
+        <div class="container mt-5 pt-5">
+            <section class="py-5" style="position: relative; z-index: 2;" id="about">
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto text-center">
+                            <!-- Judul Besar -->
+                            <h1 class="display-4 fw-bold mb-4" style="
                         background: linear-gradient(90deg, #006400, #00ff7f);
                         -webkit-background-clip: text;
                         background-clip: text;
                         color: transparent;
                         text-shadow: 0 2px 10px rgba(0,0,0,0.1);
                         ">DISEMINASI MANDIRI SAMPAH
-                        </h1>
+                            </h1>
 
-                        <!-- Deskripsi -->
-                        <p class="lead text-dark mb-5"
-                            style="font-size: 1.15rem; line-height: 2; font-weight: normal; ">
-                            Diseminasi Mandiri Sampah (DEMIMASA) adalah proyek inovatif yang bertujuan untuk mengedukasi
-                            dan
-                            memberdayakan masyarakat dalam pengelolaan sampah secara mandiri. Proyek ini berfokus pada
-                            upaya
-                            peningkatan kesadaran lingkungan, pengurangan volume sampah, dan pemanfaatan sampah menjadi
-                            sumber
-                            daya yang berguna. Dengan mengajak masyarakat berpartisipasi aktif, DEMIMASA ingin
-                            menciptakan
-                            perubahan perilaku dan budaya pengelolaan sampah yang lebih baik.
-                        </p>
+                            <!-- Deskripsi -->
+                            <p class="lead text-dark mb-5"
+                                style="font-size: 1.15rem; line-height: 2; font-weight: normal; ">
+                                Diseminasi Mandiri Sampah (DEMIMASA) adalah proyek inovatif yang bertujuan untuk
+                                mengedukasi
+                                dan
+                                memberdayakan masyarakat dalam pengelolaan sampah secara mandiri. Proyek ini berfokus
+                                pada
+                                upaya
+                                peningkatan kesadaran lingkungan, pengurangan volume sampah, dan pemanfaatan sampah
+                                menjadi
+                                sumber
+                                daya yang berguna. Dengan mengajak masyarakat berpartisipasi aktif, DEMIMASA ingin
+                                menciptakan
+                                perubahan perilaku dan budaya pengelolaan sampah yang lebih baik.
+                            </p>
 
-                        <!-- 3 Gambar Kendaraan -->
-                        <div class="row justify-content-center g-4 g-md-5">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <img src="kendaraan1.png" class="img-fluid rounded-3" alt="Kendaraan 1">
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <img src="kendaraan2.png" class="img-fluid rounded-3" alt="Kendaraan 2">
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <img src="kendaraan3.png" class="img-fluid rounded-3" alt="Kendaraan 3">
+                            <!-- 3 Gambar Kendaraan -->
+                            <div class="row justify-content-center g-4 g-md-5">
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <img src="kendaraan1.png" class="img-fluid rounded-3" alt="Kendaraan 1">
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4">
+                                    <img src="kendaraan2.png" class="img-fluid rounded-3" alt="Kendaraan 2">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="kendaraan3.png" class="img-fluid rounded-3" alt="Kendaraan 3">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="program"
-            style="min-height:100vh; display:flex; align-items:center; padding:120px 0 80px; position:relative; z-index:2;">
-            <div class="container">
-                <div class="row align-items-center g-4 g-lg-5">
+            </section>
+            <section id="program"
+                style="min-height:100vh; display:flex; align-items:center; padding:120px 0 80px; position:relative; z-index:2;">
+                <div class="container">
+                    <div class="row align-items-center g-4 g-lg-5">
 
-                    <!-- GAMBAR ANAK DI KIRI -->
-                    <div class="col-lg-5 text-center">
-                        <img src="anak-sampah.png" alt="Anak di tengah sampah" class="img-fluid rounded-4" style="
+                        <!-- GAMBAR ANAK DI KIRI -->
+                        <div class="col-lg-5 text-center">
+                            <img src="anak-sampah.png" alt="Anak di tengah sampah" class="img-fluid rounded-4" style="
                 max-height: 78vh;      
                 height: 78vh;          
                 width: auto;           
                 object-fit: cover;     
                 border: 8px solid rgba(255,255,255,0.9);">
-                    </div>
+                        </div>
 
-                    <!-- JUDUL + DAFTAR KOMPONEN DI KANAN -->
-                    <div class="col-lg-7">
-                        <h1 class="mb-4" style="
+                        <!-- JUDUL + DAFTAR KOMPONEN DI KANAN -->
+                        <div class="col-lg-7">
+                            <h1 class="mb-4" style="
           font-size:3.2rem;
           font-weight:900;
           background:linear-gradient(90deg,#006400,#00ff7f);
@@ -180,187 +201,190 @@
           color:transparent;
         ">KOMPONEN PROGRAM</h1>
 
-                        <div style="font-size:1.15rem; line-height:1.9; color:#222;">
+                            <div style="font-size:1.15rem; line-height:1.9; color:#222;">
 
-                            <p class="fw-bold mb-2">• Edukasi dan Penyuluhan</p>
-                            <div class="ms-4 mb-4">
-                                ○ Pelatihan Pengelolaan Sampah<br>
-                                ○ Kampanye Kesadaran Lingkungan
-                            </div>
+                                <p class="fw-bold mb-2">• Edukasi dan Penyuluhan</p>
+                                <div class="ms-4 mb-4">
+                                    ○ Pelatihan Pengelolaan Sampah<br>
+                                    ○ Kampanye Kesadaran Lingkungan
+                                </div>
 
-                            <p class="fw-bold mb-2">• Penerapan Praktik Pengelolaan Sampah</p>
-                            <div class="ms-4 mb-4">
-                                ○ Pemilahan Sampah di Sumber<br>
-                                ○ Pengomposan Sampah Organik<br>
-                                ○ Bank Sampah
-                            </div>
+                                <p class="fw-bold mb-2">• Penerapan Praktik Pengelolaan Sampah</p>
+                                <div class="ms-4 mb-4">
+                                    ○ Pemilahan Sampah di Sumber<br>
+                                    ○ Pengomposan Sampah Organik<br>
+                                    ○ Bank Sampah
+                                </div>
 
-                            <p class="fw-bold mb-2">• Pemberdayaan Masyarakat dan Santri</p>
-                            <div class="ms-4">
-                                ○ Kader Lingkungan<br>
-                                ○ Program Kreativitas dari Sampah<br>
-                                ○ Kolaborasi dengan Lembaga Profesional dan Stakeholders
+                                <p class="fw-bold mb-2">• Pemberdayaan Masyarakat dan Santri</p>
+                                <div class="ms-4">
+                                    ○ Kader Lingkungan<br>
+                                    ○ Program Kreativitas dari Sampah<br>
+                                    ○ Kolaborasi dengan Lembaga Profesional dan Stakeholders
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="py-5" style="background: rgba(255,255,255,0.9); position: relative; z-index: 2;" id="flow">
-            <div class="container py-4" style="max-width: 1200px;">
+            </section>
+            <section class="py-5" style="background: rgba(255,255,255,0.9); position: relative; z-index: 2;" id="flow">
+                <div class="container py-4" style="max-width: 1200px;">
 
-                <!-- JUDUL -->
-                <h1 class="text-center fw-bold mb-5" style="font-size: 2.7rem; background:linear-gradient(90deg,#006400,#00ff7f);
+                    <!-- JUDUL -->
+                    <h1 class="text-center fw-bold mb-5" style="font-size: 2.7rem; background:linear-gradient(90deg,#006400,#00ff7f);
             -webkit-background-clip:text; color:transparent;">
-                    WORK FLOW DEMIMASA
-                </h1>
+                        WORK FLOW DEMIMASA
+                    </h1>
 
-                <!-- WRAPPER UTAMA -->
-                <div class="row justify-content-center text-center">
+                    <!-- WRAPPER UTAMA -->
+                    <div class="row justify-content-center text-center">
 
-                    <!-- INPUT SAMPAH -->
-                    <div class="col-12 mb-4">
-                        <div class="p-4 rounded-4 text-white fw-bold mx-auto"
-                            style="background:#0b6f3a; font-size:1.1rem; width: 330px;">
-                            INPUT SAMPAH <br> ORGANIS / NON-ORGANIK
-                        </div>
-                    </div>
-
-                    <!-- PANAH BESAR KE BAWAH -->
-                    <div class="col-12 mb-4">
-                        <div style="font-size: 3rem;">⬇</div>
-                    </div>
-
-                    <!-- BLOK CABANG / 50 / 20 / 30 -->
-                    <div class="col-lg-10">
-
-                        <!-- 50% BIOKONVERSI -->
-                        <div class="workflow-block">
-                            <div class="wf-black">50% BIOKONVERSI</div>
-                            <div class="arrow">→</div>
-
-                            <div class="wf-items">
-                                <div class="wf-green">MAGGOT BSF</div>
-                                <div class="wf-green">PROSES RDF</div>
-                                <div class="wf-green">NUTRISI PAKAN TERNAK</div>
-                                <div class="wf-green">RDF / EBT</div>
+                        <!-- INPUT SAMPAH -->
+                        <div class="col-12 mb-4">
+                            <div class="p-4 rounded-4 text-white fw-bold mx-auto"
+                                style="background:#0b6f3a; font-size:1.1rem; width: 330px;">
+                                INPUT SAMPAH <br> ORGANIS / NON-ORGANIK
                             </div>
                         </div>
 
-                        <!-- 20% RESIDU -->
-                        <div class="workflow-block">
-                            <div class="wf-black">20% RESIDU</div>
-                            <div class="arrow">→</div>
-
-                            <div class="wf-items">
-                                <div class="wf-green">INCINERATOR RAMAH LINGKUNGAN</div>
-                                <div class="wf-green">5% PRODUK PUPUK & PASIR KARBON</div>
-                            </div>
+                        <!-- PANAH BESAR KE BAWAH -->
+                        <div class="col-12 mb-4">
+                            <div style="font-size: 3rem;">⬇</div>
                         </div>
 
-                        <!-- 30% SAMPAH EKONOMIS -->
-                        <div class="workflow-block">
-                            <div class="wf-black">30% SAMPAH EKONOMIS</div>
-                            <div class="arrow">→</div>
-                            <div class="wf-items">
-                                <div class="wf-green">BANK SAMPAH</div>
-                                <div class="wf-green">PROSES PYROLISIS</div>
-                                <div class="wf-green">EBT</div>
+                        <!-- BLOK CABANG / 50 / 20 / 30 -->
+                        <div class="col-lg-10">
+
+                            <!-- 50% BIOKONVERSI -->
+                            <div class="workflow-block">
+                                <div class="wf-black">50% BIOKONVERSI</div>
+                                <div class="arrow">→</div>
+
+                                <div class="wf-items">
+                                    <div class="wf-green">MAGGOT BSF</div>
+                                    <div class="wf-green">PROSES RDF</div>
+                                    <div class="wf-green">NUTRISI PAKAN TERNAK</div>
+                                    <div class="wf-green">RDF / EBT</div>
+                                </div>
+                            </div>
+
+                            <!-- 20% RESIDU -->
+                            <div class="workflow-block">
+                                <div class="wf-black">20% RESIDU</div>
+                                <div class="arrow">→</div>
+
+                                <div class="wf-items">
+                                    <div class="wf-green">INCINERATOR RAMAH LINGKUNGAN</div>
+                                    <div class="wf-green">5% PRODUK PUPUK & PASIR KARBON</div>
+                                </div>
+                            </div>
+
+                            <!-- 30% SAMPAH EKONOMIS -->
+                            <div class="workflow-block">
+                                <div class="wf-black">30% SAMPAH EKONOMIS</div>
+                                <div class="arrow">→</div>
+                                <div class="wf-items">
+                                    <div class="wf-green">BANK SAMPAH</div>
+                                    <div class="wf-green">PROSES PYROLISIS</div>
+                                    <div class="wf-green">EBT</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CATATAN -->
+                    <div class="row mt-4 justify-content-center">
+
+                        <!-- KIRI: daftar -->
+                        <div class="col-lg-7">
+                            <ul style="font-size:1rem;">
+                                <li>Penghimpunan sampah oleh Relawan Santri Bumi</li>
+                                <li>Peternakan Maggot</li>
+                                <li>Bank Sampah penambah ekonomi rumah tangga</li>
+                                <li>Sipil Bangunan Kawasan & Instalasi</li>
+                            </ul>
+                        </div>
+                        <!-- KANAN: kotak catatan EBT / RDF -->
+                        <div class="col-lg-4 d-flex align-items-start">
+                            <div class="p-3 rounded-3"
+                                style="background:#e8f5e9; border-left:6px solid #0b6f3a; font-size:1rem;">
+
+                                <strong>Keterangan:</strong><br>
+                                • <b>EBT</b> = Energi Baru Terbarukan <br>
+                                • <b>RDF</b> = Refuse Derived Fuel
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- CATATAN -->
-                <div class="row mt-4 justify-content-center">
+            </section>
+        </div>
+        <!-- FOOTER -->
+        <footer class="text-white py-5"
+            style="background: linear-gradient(135deg, #0b6f3a, #004d26); position:relative; z-index:2;">
+            <div class="container">
+                <div class="row">
 
-                    <!-- KIRI: daftar -->
-                    <div class="col-lg-7">
-                        <ul style="font-size:1rem;">
-                            <li>Penghimpunan sampah oleh Relawan Santri Bumi</li>
-                            <li>Peternakan Maggot</li>
-                            <li>Bank Sampah penambah ekonomi rumah tangga</li>
-                            <li>Sipil Bangunan Kawasan & Instalasi</li>
+                    <!-- KIRI: Logo + Deskripsi Singkat -->
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <img src="santribuminav.png" alt="Santri Bumi" width="220" class="mb-3">
+                        <p class="mb-3" style="font-size:1.1rem; opacity:0.95;">
+                            <strong>SANTRI BUMI GREEN SYNDICATE</strong><br>
+                            Mengelola Sampah Menjadi Berkah
+                        </p>
+                        <p class="small opacity-80">
+                            Gerakan santri peduli lingkungan melalui pengelolaan sampah mandiri,
+                            pemberdayaan ekonomi, dan energi terbarukan.
+                        </p>
+                    </div>
+
+                    <!-- TENGAH: Menu Cepat -->
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <h5 class="fw-bold mb-3">MENU</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Green
+                                    Campaign</a>
+                            </li>
+                            <li class="mb-2"><a href="#about"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Tentang
+                                    Kami</a>
+                            </li>
+                            <li class="mb-2"><a href="#program"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Program</a>
+                            </li>
+                            <li class="mb-2"><a href="#flow"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Work Flow</a>
+                            </li>
                         </ul>
                     </div>
-                    <!-- KANAN: kotak catatan EBT / RDF -->
-                    <div class="col-lg-4 d-flex align-items-start">
-                        <div class="p-3 rounded-3"
-                            style="background:#e8f5e9; border-left:6px solid #0b6f3a; font-size:1rem;">
 
-                            <strong>Keterangan:</strong><br>
-                            • <b>EBT</b> = Energi Baru Terbarukan <br>
-                            • <b>RDF</b> = Refuse Derived Fuel
+                    <!-- KANAN: Kontak + Donate Button -->
+                    <div class="col-lg-4">
+                        <h5 class="fw-bold mb-3">HUBUNGI KAMI</h5>
+                        <p class="mb-2">
+                            <strong>Email:</strong> info@santribumi.org<br>
+                            <strong>WhatsApp:</strong> +62 812-3456-7890
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg"
+                                style="background:#ffb300; border:none;">
+                                DONASI SEKARANG
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-    <!-- FOOTER -->
-    <footer class="text-white py-5"
-        style="background: linear-gradient(135deg, #0b6f3a, #004d26); position:relative; z-index:2;">
-        <div class="container">
-            <div class="row">
 
-                <!-- KIRI: Logo + Deskripsi Singkat -->
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="santribuminav.png" alt="Santri Bumi" width="220" class="mb-3">
-                    <p class="mb-3" style="font-size:1.1rem; opacity:0.95;">
-                        <strong>SANTRI BUMI GREEN SYNDICATE</strong><br>
-                        Mengelola Sampah Menjadi Berkah
-                    </p>
-                    <p class="small opacity-80">
-                        Gerakan santri peduli lingkungan melalui pengelolaan sampah mandiri,
-                        pemberdayaan ekonomi, dan energi terbarukan.
-                    </p>
+                <!-- Garis Pemisah -->
+                <hr class="my-4 opacity-30">
+
+                <!-- Copyright -->
+                <div class="text-center small opacity-80">
+                    © 2025 Santri Bumi Green Syndicate. All rights reserved.
+                    <span class="mx-3">|</span>
+                    Dibuat dengan cinta untuk bumi yang lebih hijau
                 </div>
-
-                <!-- TENGAH: Menu Cepat -->
-                <div class="col-lg-3 mb-4 mb-lg-0">
-                    <h5 class="fw-bold mb-3">MENU</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#"
-                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Green Campaign</a>
-                        </li>
-                        <li class="mb-2"><a href="#about"
-                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Tentang Kami</a>
-                        </li>
-                        <li class="mb-2"><a href="#program"
-                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Program</a></li>
-                        <li class="mb-2"><a href="#flow"
-                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Work Flow</a></li>
-                    </ul>
-                </div>
-
-                <!-- KANAN: Kontak + Donate Button -->
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">HUBUNGI KAMI</h5>
-                    <p class="mb-2">
-                        <strong>Email:</strong> info@santribumi.org<br>
-                        <strong>WhatsApp:</strong> +62 812-3456-7890
-                    </p>
-                    <div class="mt-4">
-                        <a href="#" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg"
-                            style="background:#ffb300; border:none;">
-                            DONASI SEKARANG
-                        </a>
-                    </div>
-                </div>
-
             </div>
-
-            <!-- Garis Pemisah -->
-            <hr class="my-4 opacity-30">
-
-            <!-- Copyright -->
-            <div class="text-center small opacity-80">
-                © 2025 Santri Bumi Green Syndicate. All rights reserved.
-                <span class="mx-3">|</span>
-                Dibuat dengan cinta untuk bumi yang lebih hijau
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 
 </html>
