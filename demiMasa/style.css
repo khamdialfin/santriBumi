@@ -1,0 +1,129 @@
+/* ===========================
+   1. NAVBAR RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .custom-navbar {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+
+    .custom-navbar img {
+        width: 150px; /* Perkecil logo */
+    }
+
+    .custom-navbar::after {
+        width: 90%;
+        bottom: 5px;
+    }
+}
+
+/* ===========================
+   2. BACKGROUND FULLSCREEN
+=========================== */
+@media (max-width: 768px) {
+    body > div[style*="background"] {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* ===========================
+   3. JUDUL & TEKS RESPONSIF
+=========================== */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 1.9rem !important;
+    }
+
+    #program h1 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+
+    p.lead {
+        font-size: 1rem !important;
+    }
+}
+
+/* ===========================
+   4. GAMBAR RESPONSIF
+=========================== */
+@media (max-width: 768px) {
+    /* Gambar anak */
+    #program img {
+        height: auto !important;
+        width: 100%;
+        border-width: 5px;
+        margin-bottom: 20px;
+    }
+
+    /* Gambar kendaraan */
+    #about img {
+        width: 100%;
+    }
+}
+
+/* ===========================
+   5. WORKFLOW RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .workflow-block {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wf-black {
+        min-width: auto;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+
+    .wf-items {
+        justify-content: center;
+    }
+
+    .wf-green {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===========================
+   6. FOOTER RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    footer img {
+        width: 160px;
+    }
+
+    footer .btn-lg {
+        width: 100%;
+        padding: 12px;
+    }
+
+    footer .row > div {
+        text-align: center;
+    }
+}
+
+/* ===========================
+   7. SPACING GLOBAL RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    section {
+        padding-top: 50px !important;
+    }
+}

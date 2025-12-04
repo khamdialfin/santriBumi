@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santri Bumi - Demi Masa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     .custom-navbar {
@@ -40,45 +41,47 @@
     .custom-navbar .nav-link:hover {
         color: #dcdcdc !important;
     }
-     .workflow-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    gap: 20px;
-}
 
-.wf-black {
-    padding: 15px 20px;
-    background: #000;
-    color: #fff;
-    min-width: 170px;
-    text-align: center;
-    border-radius: 12px;
-    font-weight: bold;
-}
+    .workflow-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        gap: 20px;
+    }
 
-.arrow {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #0b6f3a;
-}
+    .wf-black {
+        padding: 15px 20px;
+        background: #000;
+        color: #fff;
+        min-width: 170px;
+        text-align: center;
+        border-radius: 12px;
+        font-weight: bold;
+    }
 
-.wf-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: flex-start;
-}
+    .arrow {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #0b6f3a;
+    }
 
-.wf-green {
-    padding: 12px 18px;
-    background: #0b6f3a;
-    color: white;
-    border-radius: 12px;
-    font-size: 0.95rem;
-}
+    .wf-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+
+    .wf-green {
+        padding: 12px 18px;
+        background: #0b6f3a;
+        color: white;
+        border-radius: 12px;
+        font-size: 0.95rem;
+    }
 </style>
+
 <body>
     <div style="
     top: 0; left: 0;
@@ -203,101 +206,160 @@
                 </div>
             </div>
         </section>
-<section class="py-5" style="background: rgba(255,255,255,0.9); position: relative; z-index: 2;" id="flow">
-    <div class="container py-4" style="max-width: 1200px;">
+        <section class="py-5" style="background: rgba(255,255,255,0.9); position: relative; z-index: 2;" id="flow">
+            <div class="container py-4" style="max-width: 1200px;">
 
-        <!-- JUDUL -->
-        <h1 class="text-center fw-bold mb-5" 
-            style="font-size: 2.7rem; background:linear-gradient(90deg,#006400,#00ff7f);
+                <!-- JUDUL -->
+                <h1 class="text-center fw-bold mb-5" style="font-size: 2.7rem; background:linear-gradient(90deg,#006400,#00ff7f);
             -webkit-background-clip:text; color:transparent;">
-            WORK FLOW DEMIMASA
-        </h1>
+                    WORK FLOW DEMIMASA
+                </h1>
 
-        <!-- WRAPPER UTAMA -->
-        <div class="row justify-content-center text-center">
+                <!-- WRAPPER UTAMA -->
+                <div class="row justify-content-center text-center">
 
-            <!-- INPUT SAMPAH -->
-            <div class="col-12 mb-4">
-                <div class="p-4 rounded-4 text-white fw-bold mx-auto" 
-                    style="background:#0b6f3a; font-size:1.1rem; width: 330px;">
-                    INPUT SAMPAH <br> ORGANIS / NON-ORGANIK
+                    <!-- INPUT SAMPAH -->
+                    <div class="col-12 mb-4">
+                        <div class="p-4 rounded-4 text-white fw-bold mx-auto"
+                            style="background:#0b6f3a; font-size:1.1rem; width: 330px;">
+                            INPUT SAMPAH <br> ORGANIS / NON-ORGANIK
+                        </div>
+                    </div>
+
+                    <!-- PANAH BESAR KE BAWAH -->
+                    <div class="col-12 mb-4">
+                        <div style="font-size: 3rem;">⬇</div>
+                    </div>
+
+                    <!-- BLOK CABANG / 50 / 20 / 30 -->
+                    <div class="col-lg-10">
+
+                        <!-- 50% BIOKONVERSI -->
+                        <div class="workflow-block">
+                            <div class="wf-black">50% BIOKONVERSI</div>
+                            <div class="arrow">→</div>
+
+                            <div class="wf-items">
+                                <div class="wf-green">MAGGOT BSF</div>
+                                <div class="wf-green">PROSES RDF</div>
+                                <div class="wf-green">NUTRISI PAKAN TERNAK</div>
+                                <div class="wf-green">RDF / EBT</div>
+                            </div>
+                        </div>
+
+                        <!-- 20% RESIDU -->
+                        <div class="workflow-block">
+                            <div class="wf-black">20% RESIDU</div>
+                            <div class="arrow">→</div>
+
+                            <div class="wf-items">
+                                <div class="wf-green">INCINERATOR RAMAH LINGKUNGAN</div>
+                                <div class="wf-green">5% PRODUK PUPUK & PASIR KARBON</div>
+                            </div>
+                        </div>
+
+                        <!-- 30% SAMPAH EKONOMIS -->
+                        <div class="workflow-block">
+                            <div class="wf-black">30% SAMPAH EKONOMIS</div>
+                            <div class="arrow">→</div>
+                            <div class="wf-items">
+                                <div class="wf-green">BANK SAMPAH</div>
+                                <div class="wf-green">PROSES PYROLISIS</div>
+                                <div class="wf-green">EBT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CATATAN -->
+                <div class="row mt-4 justify-content-center">
+
+                    <!-- KIRI: daftar -->
+                    <div class="col-lg-7">
+                        <ul style="font-size:1rem;">
+                            <li>Penghimpunan sampah oleh Relawan Santri Bumi</li>
+                            <li>Peternakan Maggot</li>
+                            <li>Bank Sampah penambah ekonomi rumah tangga</li>
+                            <li>Sipil Bangunan Kawasan & Instalasi</li>
+                        </ul>
+                    </div>
+                    <!-- KANAN: kotak catatan EBT / RDF -->
+                    <div class="col-lg-4 d-flex align-items-start">
+                        <div class="p-3 rounded-3"
+                            style="background:#e8f5e9; border-left:6px solid #0b6f3a; font-size:1rem;">
+
+                            <strong>Keterangan:</strong><br>
+                            • <b>EBT</b> = Energi Baru Terbarukan <br>
+                            • <b>RDF</b> = Refuse Derived Fuel
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </div>
+    <!-- FOOTER -->
+    <footer class="text-white py-5"
+        style="background: linear-gradient(135deg, #0b6f3a, #004d26); position:relative; z-index:2;">
+        <div class="container">
+            <div class="row">
 
-            <!-- PANAH BESAR KE BAWAH -->
-            <div class="col-12 mb-4">
-                <div style="font-size: 3rem;">⬇</div>
+                <!-- KIRI: Logo + Deskripsi Singkat -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="santribuminav.png" alt="Santri Bumi" width="220" class="mb-3">
+                    <p class="mb-3" style="font-size:1.1rem; opacity:0.95;">
+                        <strong>SANTRI BUMI GREEN SYNDICATE</strong><br>
+                        Mengelola Sampah Menjadi Berkah
+                    </p>
+                    <p class="small opacity-80">
+                        Gerakan santri peduli lingkungan melalui pengelolaan sampah mandiri,
+                        pemberdayaan ekonomi, dan energi terbarukan.
+                    </p>
+                </div>
+
+                <!-- TENGAH: Menu Cepat -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3">MENU</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#"
+                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Green Campaign</a>
+                        </li>
+                        <li class="mb-2"><a href="#about"
+                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Tentang Kami</a>
+                        </li>
+                        <li class="mb-2"><a href="#program"
+                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Program</a></li>
+                        <li class="mb-2"><a href="#flow"
+                                class="text-white text-decoration-none opacity-90 hover-opacity-100">Work Flow</a></li>
+                    </ul>
+                </div>
+
+                <!-- KANAN: Kontak + Donate Button -->
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">HUBUNGI KAMI</h5>
+                    <p class="mb-2">
+                        <strong>Email:</strong> info@santribumi.org<br>
+                        <strong>WhatsApp:</strong> +62 812-3456-7890
+                    </p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg"
+                            style="background:#ffb300; border:none;">
+                            DONASI SEKARANG
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- BLOK CABANG / 50 / 20 / 30 -->
-            <div class="col-lg-10">
+            <!-- Garis Pemisah -->
+            <hr class="my-4 opacity-30">
 
-                <!-- 50% BIOKONVERSI -->
-                <div class="workflow-block">
-                    <div class="wf-black">50% BIOKONVERSI</div>
-                    <div class="arrow">→</div>
-
-                    <div class="wf-items">
-                        <div class="wf-green">MAGGOT BSF</div>
-                        <div class="wf-green">PROSES RDF</div>
-                        <div class="wf-green">NUTRISI PAKAN TERNAK</div>
-                        <div class="wf-green">RDF / EBT</div>
-                    </div>
-                </div>
-
-                <!-- 20% RESIDU -->
-                <div class="workflow-block">
-                    <div class="wf-black">20% RESIDU</div>
-                    <div class="arrow">→</div>
-
-                    <div class="wf-items">
-                        <div class="wf-green">INCINERATOR RAMAH LINGKUNGAN</div>
-                        <div class="wf-green">5% PRODUK PUPUK & PASIR KARBON</div>
-                    </div>
-                </div>
-
-                <!-- 30% SAMPAH EKONOMIS -->
-                <div class="workflow-block">
-                    <div class="wf-black">30% SAMPAH EKONOMIS</div>
-                    <div class="arrow">→</div>
-
-                    <div class="wf-items">
-                        <div class="wf-green">BANK SAMPAH</div>
-                        <div class="wf-green">PROSES PYROLISIS</div>
-                        <div class="wf-green">EBT</div>
-                    </div>
-                </div>
-
+            <!-- Copyright -->
+            <div class="text-center small opacity-80">
+                © 2025 Santri Bumi Green Syndicate. All rights reserved.
+                <span class="mx-3">|</span>
+                Dibuat dengan cinta untuk bumi yang lebih hijau
             </div>
         </div>
-
-      <!-- CATATAN -->
-    <div class="row mt-4 justify-content-center">
-
-    <!-- KIRI: daftar -->
-    <div class="col-lg-7">
-        <ul style="font-size:1rem;">
-            <li>Penghimpunan sampah oleh Relawan Santri Bumi</li>
-            <li>Peternakan Maggot</li>
-            <li>Bank Sampah penambah ekonomi rumah tangga</li>
-            <li>Sipil Bangunan Kawasan & Instalasi</li>
-        </ul>
-    </div>
-
-    <!-- KANAN: kotak catatan EBT / RDF -->
-    <div class="col-lg-4 d-flex align-items-start">
-        <div class="p-3 rounded-3"
-            style="background:#e8f5e9; border-left:6px solid #0b6f3a; font-size:1rem;">
-            
-            <strong>Keterangan:</strong><br>
-            • <b>EBT</b> = Energi Baru Terbarukan <br>
-            • <b>RDF</b> = Refuse Derived Fuel
-        </div>
-    </div>
-</div>
-</div>
-</section>
-    </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
