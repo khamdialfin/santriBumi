@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BERKAH BERSIH KALI BEBAS SAMPAH</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+      }
+
+      /* NAVBAR */
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 25px 0;
+        background: transparent;
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin-right: 40px;
+        align-items: center;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .donate-btn {
+        background: white;
+        color: green;
+        padding: 6px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* SECTION 1 */
+      #green-campaign img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* PROGRAM SECTION */
+      .program-section {
+        padding: 30px 30px; /* Lebih rapat seperti referensi */
+      }
+
+      .program-container {
+        display: flex;
+        gap: 40px; /* Jarak sesuai referensi */
+        align-items: flex-start;
+      }
+
+      /* KIRI (judul + gambar) */
+      .program-image {
+        width: 60%;
+      }
+
+      .program-image .title-img {
+        width: 80%; /* Ukuran judul mirip referensi */
+        margin-bottom: 5px; /* Rapat dengan gambar */
+      }
+
+      .program-image .photo-img {
+        width: 80%; /* Gambar besar seperti referensi */
+        margin-top: 5px; /* rapat tapi tidak mepet */
+      }
+
+      /* TEKS */
+      .program-text {
+        width: 55%;
+        font-size: 22px;
+        line-height: 1.5;
+      }
+
+      .program-text ol {
+        padding-left: 20px;
+      }
+
+      .program-text li {
+        margin-bottom: 5px; /* Rapat sesuai referensi */
+      }
+
+      .program-text ul {
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      /* SECTION ABOUT */
+      .about-section {
+        padding: 0;
+        margin: 0;
+      }
+
+      .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+      }
+
+      /* KIRI */
+      .goals-left {
+        flex: 1;
+      }
+
+      .goals-title {
+        width: 100%;
+        max-width: 350px; /* atur sesuai kebutuhan */
+        margin-bottom: 3px;
+      }
+
+      /* teks */
+      .goals-text ul {
+        padding-left: 50px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 20px;
+      }
+
+      .goals-text p {
+        line-height: 1.7;
+        font-size: 20px;
+        padding-left: 20px;
+      }
+
+      /* KANAN */
+      .goals-right {
+        flex: 1;
+      }
+
+      .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* foto kanan full & rapi */
+       
+      }
+
+      /* DDONATE SECTION */
+        #donate img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <ul class="menu">
+        <li><a href="#green-campaign">GREEN CAMPAIGN</a></li>
+        <li><a href="#program">PROGRAM</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <a href="#donate" class="donate-btn">DONATE</a>
+      </ul>
+    </nav>
+
+    <!-- HALAMAN PERTAMA -->
+    <section id="green-campaign">
+      <img src="home.png" alt="home" />
+    </section>
+
+    <!-- HALAMAN PROGRAM -->
+    <section id="program" class="program-section">
+      <div class="program-container">
+        <!-- KIRI -->
+        <div class="program-image">
+          <img
+            src="textbersihkali.png"
+            class="title-img"
+            alt="BERSIH KALI BEBAS SAMPAH"
+          />
+          <img
+            src="program-image.png"
+            class="photo-img"
+            alt="Foto Sampah Sungai"
+          />
+        </div>
+
+        <!-- KANAN -->
+        <div class="program-text">
+          <p>
+            Program <b>BERKAH (Bersih Kali Bebas Sampah)</b> adalah inisiatif
+            lingkungan yang bertujuan untuk membersihkan sungai dari sampah dan
+            mencegah pencemaran lebih lanjut. Program ini berfokus pada mitigasi
+            sampah sungai dan pemasangan teknologi Water Baricade SB23 untuk
+            menangkap sampah sebelum masuk ke perairan yang lebih luas.
+          </p>
+
+          <p><b>Komponen Program:</b></p>
+
+          <ol>
+            <li>
+              Mitigasi Sampah Sungai
+              <ul>
+                <li>Pembersihan Manual dan Mekanis</li>
+                <li>Program Adopsi Sungai</li>
+                <li>Penempatan Tempat Sampah dan Penyuluhan</li>
+              </ul>
+            </li>
+
+            <li>
+              Pemasangan Water Baricade SB23
+              <ul>
+                <li>Pengenalan Teknologi</li>
+                <li>Monitoring</li>
+                <li>Integrasi Pengelolaan Sampah Desa</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HALAMAN ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <!-- KIRI -->
+        <div class="goals-left">
+          <img src="goalsprogram.png" class="goals-title" alt="Goals Program" />
+
+          <div class="goals-text">
+            <ul>
+              <li>
+                Mengurangi jumlah sampah yang masuk ke sungai dan akhirnya
+                mengalir ke laut, sehingga mengurangi pencemaran air.
+              </li>
+              <li>
+                Meningkatkan kesadaran dan partisipasi masyarakat dalam menjaga
+                kebersihan sungai.
+              </li>
+              <li>
+                Mengembangkan solusi teknologi yang efektif untuk menangani
+                masalah sampah sungai.
+              </li>
+              <li>
+                Membangun kerjasama antara pemerintah, masyarakat, dan sektor
+                swasta dalam menjaga lingkungan perairan.
+              </li>
+            </ul>
+
+            <p>
+              Dengan program BERKAH, diharapkan sungai-sungai dapat menjadi
+              lebih bersih, ekosistem air terjaga, dan kualitas hidup masyarakat
+              meningkat.
+            </p>
+          </div>
+        </div>
+
+        <!-- KANAN -->
+        <div class="goals-right">
+          <img src="aboutimage.png" alt="Foto Sungai" class="about-image" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HALAMAN DONATE -->
+     <section id="donate">
+      <img src="donate.png" alt="Halaman terakhir" />
+    </section>
+  </body>
+</html>

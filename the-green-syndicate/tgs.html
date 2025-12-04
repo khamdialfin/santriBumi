@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Green Syndicate</title>
+
+    <style>
+        /* ---------------- Global ---------------- */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        section { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ---------------- HERO SECTIONS ---------------- */
+        .hero,
+        .hero1 {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            padding-bottom: 40%;
+            position: relative;
+        }
+
+        .hero { background-image: url("insan.png"); }
+        .hero1 { background-image: url("tgs.png"); }
+
+        /* ---------------- NAVIGATION ---------------- */
+        nav {
+            text-align: right;
+            padding: 50px 80px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 15px;
+        }
+
+        nav a:hover:not(.donate-btn) { opacity: 0.8; }
+
+        nav a.donate-btn {
+            background-color: white;
+            color: #0f5f2d;
+            padding: 12px 28px;
+            border-radius: 999px;
+            display: inline-block;
+        }
+
+        nav a.donate-btn:hover { background-color: #e6e6e6; }
+
+        /* ---------------- TITLE SECTION ---------------- */
+        .title-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin: 60px 0 40px;
+            padding: 0 20px;
+        }
+
+        .title-text h1 {
+            font-size: 38px;
+            margin: 0;
+            font-weight: 900;
+            color: #015f39;
+            line-height: 1.2;
+            text-align: right;
+        }
+
+        .title-img {
+            width: 260px;
+            height: auto;
+            display: block;
+        }
+
+        /* ---------------- OBJECTIVE SECTION ---------------- */
+        .objective-section {
+            width: 100%;
+            padding: 80px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .objective-left { width: 55%; }
+
+        .objective-left h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: #015f39;
+        }
+
+        .objective-left ol {
+            color: #000;
+            line-height: 1.6;
+            font-size: 18px;
+            padding-left: 20px;
+        }
+
+        .objective-right {
+            width: 40%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .objective-right .curve {
+            width: 320px;
+            display: block;
+        }
+
+        /* ---------------- 4 CARD SECTION ---------------- */
+        .cards {
+            width: 90%;
+            max-width: 1300px;
+            margin: 30px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border: 3px solid #1a7e4b;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            background: #0b683c;
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px 0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.45;
+            color: #333;
+            margin: 0;
+            padding: 0 5px;
+        }
+
+        /* ---------------- PROGRAM COMPONENTS UPDATED ---------------- */
+        .components-section {
+            padding: 60px 60px 100px;
+            background: transparent;
+        }
+
+        .components-title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #015f39;
+            margin: 0 0 40px 40px;
+            line-height: 1.05;
+            text-align: left;
+        }
+
+        .components-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0px 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .component-box {
+            width: 33%;
+            min-width: 260px;
+            background: #0b683c;
+            color: white;
+            padding: 30px 22px;
+            border-radius: 18px;
+            text-align: left;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        /* POSITION LEVELS */
+        .component-box:nth-child(1) { margin-top: 80px; }
+        .component-box:nth-child(2) { margin-top: 40px; }
+        .component-box:nth-child(3) { margin-top: 0px; }
+
+        .component-box h3 {
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .component-box ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .component-box ul li { margin-bottom: 10px; }
+
+        /* ---------------- Full images ---------------- */
+        .full-img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 1100px) {
+            .components-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .component-box {
+                width: 100%;
+                margin-top: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO 1 -->
+    <section class="hero">
+        <nav>
+            <a href="#">GREEN CAMPAIGN</a>
+            <a href="#">PROGRAM</a>
+            <a href="#">ABOUT</a>
+            <a href="#" class="donate-btn">DONATE</a>
+        </nav>
+    </section>
+
+    <!-- TITLE -->
+    <div class="title-section">
+        <div class="title-text">
+            <h1>SEBERAPA<br>PENTINGNYA</h1>
+        </div>
+        <img src="1764749986553.png" alt="" class="title-img">
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+        <div class="card">
+            <img src="1764749925488.png">
+            <div class="card-title">Urgent Needs</div>
+            <p>Banyak pesantren menghadapi kesulitan mendapatkan akses air bersih yang layak, dan kondisi ini berdampak pada kesehatan serta kenyamanan para santri.</p>
+        </div>
+
+        <div class="card">
+            <img src="1764749911739.png">
+            <div class="card-title">Health Impact</div>
+            <p>Ketiadaan air bersih dapat menyebabkan berbagai penyakit seperti diare, penyakit kulit, serta menurunkan kebersihan lingkungan pesantren.</p>
+        </div>
+
+        <div class="card">
+            <img src="1764749886610.png">
+            <div class="card-title">Improved Quality of Life</div>
+            <p>Ketersediaan air bersih memberikan dampak positif langsung pada kualitas hidup, kenyamanan, dan kesehatan para santri.</p>
+        </div>
+
+        <div class="card">
+            <img src="1764749861880.png">
+            <div class="card-title">Equitable Development</div>
+            <p>Mendukung pemerataan pembangunan di pesantren agar seluruh santri memiliki kesempatan yang sama untuk hidup sehat.</p>
+        </div>
+    </div>
+
+    <!-- OBJECTIVE PROGRAM -->
+    <div class="objective-section">
+        <div class="objective-left">
+            <h2>OBJECTIVE PROGRAM</h2>
+            <ol>
+                <li><b>Menyediakan Akses Air Bersih:</b> Memberikan akses air minum yang bersih dan aman bagi santri di pesantren yang sering kesulitan mendapatkannya.</li>
+                <li><b>Meningkatkan Kesehatan:</b> Mengurangi risiko penyakit yang disebabkan oleh air yang tidak layak konsumsi.</li>
+                <li><b>Peningkatan Kualitas Hidup:</b> Ketersediaan air bersih meningkatkan kenyamanan, kebersihan, dan kesehatan lingkungan.</li>
+                <li><b>Pemberdayaan Pesantren:</b> Membantu pesantren menjadi lebih mandiri dan sehat, serta mendukung pendidikan yang lebih baik.</li>
+            </ol>
+        </div>
+
+        <div class="objective-right">
+            <img src="1764752260118.png" class="curve">
+        </div>
+    </div>
+
+    <!-- PROGRAM COMPONENTS -->
+    <section class="components-section">
+        <h2 class="components-title">PROGRAM<br>COMPONENTS</h2>
+
+        <div class="components-wrapper">
+
+            <div class="component-box">
+                <h3>Instalasi Infrastruktur Air</h3>
+                <ul>
+                    <li>Pembangunan sumur bor, tangki penampungan air, dan sistem distribusi air yang memadai.</li>
+                    <li>Instalasi filter dan teknologi pengolahan air untuk memastikan air aman dikonsumsi.</li>
+                </ul>
+            </div>
+
+            <div class="component-box">
+                <h3>Pelatihan dan Edukasi</h3>
+                <ul>
+                    <li>Pelatihan bagi pengurus pesantren terkait pengelolaan air bersih.</li>
+                    <li>Edukasi kepada santri tentang pentingnya kesehatan dan kebersihan air.</li>
+                </ul>
+            </div>
+
+            <div class="component-box">
+                <h3>Monitoring dan Evaluasi</h3>
+                <ul>
+                    <li>Pengecekan rutin kualitas air untuk memastikan standar kesehatan tetap terjaga.</li>
+                    <li>Pemeliharaan berkala terhadap infrastruktur yang telah dibangun.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HERO 2 -->
+    <section class="hero1">
+        <nav>
+            <a href="#">GREEN CAMPAIGN</a>
+            <a href="#">PROGRAM</a>
+            <a href="#">ABOUT</a>
+            <a href="#" class="donate-btn">DONATE</a>
+        </nav>
+    </section>
+
+    <!-- IMAGES -->
+    <section><img src="GREEN SYNDICATE_20251202_212445_0000.png" class="full-img"></section>
+    <section><img src="GREEN SYNDICATE_20251202_212510_0000.png" class="full-img"></section>
+    <section><img src="GREEN SYNDICATE_20251202_212545_0000.png" class="full-img"></section>
+
+</body>
+</html>
