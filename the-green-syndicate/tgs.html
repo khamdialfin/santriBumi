@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>The Green Syndicate</title>
 
     <style>
-        /* ---------------- Global ---------------- */
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
             font-family: Arial, sans-serif;
             background: #ffffff;
             color: #222;
@@ -16,48 +21,61 @@
 
         section { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* ---------------- HERO SECTIONS ---------------- */
-        .hero,
-        .hero1 {
+        /* ---------------- HERO ---------------- */
+        .hero, .hero1 {
             width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-            padding-bottom: 40%;
             position: relative;
+            overflow: hidden;
         }
 
-        .hero { background-image: url("insan.png"); }
-        .hero1 { background-image: url("tgs.png"); }
+        .hero img, .hero1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-        /* ---------------- NAVIGATION ---------------- */
+        /* ---------------- NAVBAR ---------------- */
         nav {
-            text-align: right;
-            padding: 50px 80px;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            z-index: 10;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-right: 50px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
             font-weight: 700;
-            margin-left: 15px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+            white-space: nowrap;
+            padding: 20px;
+            margin-right: 5px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
-        nav a:hover:not(.donate-btn) { opacity: 0.8; }
+        nav a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
 
         nav a.donate-btn {
             background-color: white;
-            color: #0f5f2d;
-            padding: 12px 28px;
+            color: #0f5f2d !important;
+            padding: 10px 26px;
             border-radius: 999px;
-            display: inline-block;
+            text-shadow: none;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        nav a.donate-btn:hover { background-color: #e6e6e6; }
-
-        /* ---------------- TITLE SECTION ---------------- */
+        /* ---------------- TITLE ---------------- */
         .title-section {
             display: flex;
             justify-content: center;
@@ -65,6 +83,7 @@
             gap: 18px;
             margin: 60px 0 40px;
             padding: 0 20px;
+            flex-wrap: wrap;
         }
 
         .title-text h1 {
@@ -79,48 +98,9 @@
         .title-img {
             width: 260px;
             height: auto;
-            display: block;
         }
 
-        /* ---------------- OBJECTIVE SECTION ---------------- */
-        .objective-section {
-            width: 100%;
-            padding: 80px 100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-sizing: border-box;
-        }
-
-        .objective-left { width: 55%; }
-
-        .objective-left h2 {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 30px;
-            color: #015f39;
-        }
-
-        .objective-left ol {
-            color: #000;
-            line-height: 1.6;
-            font-size: 18px;
-            padding-left: 20px;
-        }
-
-        .objective-right {
-            width: 40%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .objective-right .curve {
-            width: 320px;
-            display: block;
-        }
-
-        /* ---------------- 4 CARD SECTION ---------------- */
+        /* ---------------- CARDS ---------------- */
         .cards {
             width: 90%;
             max-width: 1300px;
@@ -141,8 +121,9 @@
         .card img {
             width: 90px;
             height: 90px;
+            margin: 0 auto 15px;
             object-fit: contain;
-            margin-bottom: 15px;
+            display: block;
         }
 
         .card-title {
@@ -155,92 +136,230 @@
             margin-bottom: 15px;
         }
 
-        .card p {
-            font-size: 15px;
-            line-height: 1.45;
-            color: #333;
-            margin: 0;
-            padding: 0 5px;
+        .card p { font-size: 15px; line-height: 1.45; }
+
+        /* ---------------- OBJECTIVE SECTION ---------------- */
+        .objective-section {
+            width: 100%;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 60px;
+            flex-wrap: wrap;
         }
 
-        /* ---------------- PROGRAM COMPONENTS UPDATED ---------------- */
+        .objective-left {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .objective-left h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: #015f39;
+            text-align: center;
+        }
+
+        .objective-left ol {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .objective-right {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .objective-right img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+        }
+
+        /* ---------------- PROGRAM COMPONENTS ---------------- */
         .components-section {
-            padding: 60px 60px 100px;
-            background: transparent;
+            padding: 80px 20px 100px;
+            text-align: center;
         }
 
         .components-title {
             font-size: 48px;
             font-weight: 900;
             color: #015f39;
-            margin: 0 0 40px 40px;
-            line-height: 1.05;
-            text-align: left;
+            margin-bottom: 50px;
         }
 
         .components-wrapper {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0px 40px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: 0 auto;
         }
 
         .component-box {
-            width: 33%;
-            min-width: 260px;
+            width: 100%;
+            max-width: 380px;
             background: #0b683c;
             color: white;
             padding: 30px 22px;
             border-radius: 18px;
-            text-align: left;
             box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
 
-        /* POSITION LEVELS */
         .component-box:nth-child(1) { margin-top: 80px; }
         .component-box:nth-child(2) { margin-top: 40px; }
-        .component-box:nth-child(3) { margin-top: 0px; }
+        .component-box:nth-child(3) { margin-top: 0; }
 
-        .component-box h3 {
-            margin: 0 0 12px 0;
-            font-size: 20px;
-            font-weight: 800;
-        }
+        .full-img { width: 100%; height: auto; display: block; }
 
-        .component-box ul {
-            margin: 0;
-            padding-left: 18px;
-            font-size: 15px;
-            line-height: 1.6;
-        }
 
-        .component-box ul li { margin-bottom: 10px; }
+        
+/* OUR PARTNER SECTION – Background + Overlay */
+.partner-section {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+              url('assets/3.png') center/cover no-repeat fixed;
+  min-height: 90vh;
+  position: relative;
+  border-radius: 0px;
+  padding-left: 100px;
+}
 
-        /* ---------------- Full images ---------------- */
-        .full-img {
-            width: 100%;
-            display: block;
-        }
-
-        /* ---------------- RESPONSIVE ---------------- */
-        @media (max-width: 1100px) {
-            .components-wrapper {
-                flex-direction: column;
-                gap: 30px;
+/* Supaya logo tetap putih & glowing */
+.partner-logo {
+  max-height: 110px;
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  transition: all 0.3s ease;
+}
+.partner-logo:hover {
+  transform: translateY(-10px) scale(1.1)
+}
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            nav {
+                top: 25px;
+                right: 50px;
+                gap: 12px;
             }
-            .component-box {
-                width: 100%;
-                margin-top: 0 !important;
+            nav a {
+                font-size: 14px;
+                padding: 8px 12px;
+                text-shadow: 0 2px 10px rgba(0,0,0,1);
             }
+
+            .title-text h1 { font-size: 34px; }
+            .title-img { width: 220px; }
+            .cards { grid-template-columns: repeat(2, 1fr); }
+            .objective-left h2, .components-title { font-size: 42px; }
+        }
+
+        /* ==================== MODE 768px — SESUAI PERMINTAAN ==================== */
+        @media (max-width: 768px) {
+            .partner-section {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+              url('assets/3.png') center/cover no-repeat fixed;
+  min-height: 90vh;
+  position: relative;
+  border-radius: 0px;
+  padding-left: 50px;
+}
+
+            /* title kiri – gambar kanan */
+            .title-section {
+                flex-direction: row;
+                text-align: left;
+                justify-content: center;
+            }
+
+            .title-text { order: 1; }
+            .title-img { order: 2; }
+
+            nav {
+                top: 13px;
+                right: 1px;
+                gap: 12px;
+            }
+            nav a {
+                font-size: 14px;
+                padding: 8px 12px;
+                text-shadow: 0 2px 10px rgba(0,0,0,1);
+            }
+            nav a.donate-btn {
+                padding: 9px 18px;
+                font-size: 14px;
+            }
+
+            .title-text h1 { font-size: 32px; text-align: left; }
+
+            .cards { grid-template-columns: 1fr; }
+            .card { max-width: 380px; margin: 0 auto; }
+            .objective-section { padding: 50px 20px; }
+
+            .objective-left h2 {
+                font-size: 36px;
+                margin-bottom: 24px;
+            }
+            .objective-left ol {
+                font-size: 16px;
+                line-height: 1.65;
+                padding-left: 18px;
+            }
+            .objective-left ol li {
+                margin-bottom: 14px;
+            }
+
+            .components-title { font-size: 36px; }
+            .component-box { max-width: 420px; margin-top: 20px !important; }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                top: 10px;
+                right: 10px;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 13px;
+                padding: 7px 10px;
+            }
+            nav a.donate-btn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+
+            .title-text h1 { font-size: 28px; }
+            .title-img { width: 180px; }
+
+            .objective-left h2 {
+                font-size: 31px;
+                margin-bottom: 20px;
+            }
+            .objective-left ol {
+                font-size: 15px;
+                line-height: 1.7;
+                padding-left: 16px;
+            }
+            .objective-left ol li {
+                margin-bottom: 16px;
+            }
+
+            .objective-left h2, .components-title { font-size: 31px; }
         }
     </style>
 </head>
+
 <body>
 
     <!-- HERO 1 -->
     <section class="hero">
+        <img src="insan.png" alt="Hero">
         <nav>
             <a href="#">GREEN CAMPAIGN</a>
             <a href="#">PROGRAM</a>
@@ -254,88 +373,80 @@
         <div class="title-text">
             <h1>SEBERAPA<br>PENTINGNYA</h1>
         </div>
-        <img src="1764749986553.png" alt="" class="title-img">
+        <img src="1764749986553.png" class="title-img" alt="Title">
     </div>
 
     <!-- CARDS -->
     <div class="cards">
         <div class="card">
-            <img src="1764749925488.png">
+            <img src="1764749925488.png" alt="">
             <div class="card-title">Urgent Needs</div>
-            <p>Banyak pesantren menghadapi kesulitan mendapatkan akses air bersih yang layak, dan kondisi ini berdampak pada kesehatan serta kenyamanan para santri.</p>
+            <p>Banyak pesantren di Indonesia menghadapi kesulitan dalam memperoleh air bersih. Ketersediaan air yang terbatas, sumber air yang tercemar, serta infrastruktur yang tidak memadai menjadi masalah utama..</p>
         </div>
-
         <div class="card">
-            <img src="1764749911739.png">
+            <img src="1764749911739.png" alt="">
             <div class="card-title">Health Impact</div>
-            <p>Ketiadaan air bersih dapat menyebabkan berbagai penyakit seperti diare, penyakit kulit, serta menurunkan kebersihan lingkungan pesantren.</p>
+            <p>Ketiadaan akses air minum yang sehat dan mencukupi dapat menyebabkan berbagai penyakit, seperti diare, infeksi saluran pencernaan, penyakit kulit, dan penyakit menular lainnya.</p>
         </div>
-
         <div class="card">
-            <img src="1764749886610.png">
+            <img src="1764749886610.png" alt="">
             <div class="card-title">Improved Quality of Life</div>
-            <p>Ketersediaan air bersih memberikan dampak positif langsung pada kualitas hidup, kenyamanan, dan kesehatan para santri.</p>
+            <p>memberikan dampak positif yang signifikan terhadap kualitas hidup dan pendidikan di pesantren. lingkungan pesantren yang bersih dan sehat akan mendukung terciptanya atmosfer belajar yang kondusif.</p>
         </div>
-
         <div class="card">
-            <img src="1764749861880.png">
+            <img src="1764749861880.png" alt="">
             <div class="card-title">Equitable Development</div>
-            <p>Mendukung pemerataan pembangunan di pesantren agar seluruh santri memiliki kesempatan yang sama untuk hidup sehat.</p>
+            <p>Program INSAN juga sejalan dengan upaya pemerintah untuk pemerataan pembangunan dan peningkatan kesejahteraan masyarakat di seluruh wilayah Indonesia.</p>
         </div>
     </div>
 
-    <!-- OBJECTIVE PROGRAM -->
+    <!-- OBJECTIVE SECTION -->
     <div class="objective-section">
         <div class="objective-left">
             <h2>OBJECTIVE PROGRAM</h2>
             <ol>
-                <li><b>Menyediakan Akses Air Bersih:</b> Memberikan akses air minum yang bersih dan aman bagi santri di pesantren yang sering kesulitan mendapatkannya.</li>
-                <li><b>Meningkatkan Kesehatan:</b> Mengurangi risiko penyakit yang disebabkan oleh air yang tidak layak konsumsi.</li>
-                <li><b>Peningkatan Kualitas Hidup:</b> Ketersediaan air bersih meningkatkan kenyamanan, kebersihan, dan kesehatan lingkungan.</li>
-                <li><b>Pemberdayaan Pesantren:</b> Membantu pesantren menjadi lebih mandiri dan sehat, serta mendukung pendidikan yang lebih baik.</li>
+                <li><b>Menyediakan Akses Air Bersih: Memberikan akses air minum yang bersih dan aman bagi santri di pesantren, yang seringkali kesulitan mendapatkan pasokan air bersih.</li>
+                <li><b>Meningkatkan Kesehatan dan Higiene: Mengurangi risiko penyakit yang disebabkan oleh air yang tidak bersih, seperti diare dan penyakit kulit, melalui penyediaan air yang layak minum.</li>
+                <li><b>Peningkatan Kualitas Hidup: Meningkatkan kualitas hidup santri dan lingkungan pesantren dengan fasilitas air yang memadai.</li>
+                <li><b>Pemberdayaan Pesantren: Membantu pesantren menjadi lebih mandiri dan sehat, mendukung perkembangan pendidikan yang lebih baik.</li>
             </ol>
         </div>
-
         <div class="objective-right">
-            <img src="1764752260118.png" class="curve">
+            <img src="1764752260118.png" alt="Objective">
         </div>
     </div>
 
     <!-- PROGRAM COMPONENTS -->
     <section class="components-section">
         <h2 class="components-title">PROGRAM<br>COMPONENTS</h2>
-
         <div class="components-wrapper">
-
             <div class="component-box">
                 <h3>Instalasi Infrastruktur Air</h3>
                 <ul>
-                    <li>Pembangunan sumur bor, tangki penampungan air, dan sistem distribusi air yang memadai.</li>
-                    <li>Instalasi filter dan teknologi pengolahan air untuk memastikan air aman dikonsumsi.</li>
+                    <li>Pembangunan sumur bor, tangki penampungan air, dan sistem distribusi air.</li>
+                    <li>Instalasi filter air dan teknologi pengolahan air untuk memastikan air yang dihasilkan memenuhi standar kesehatan.</li>
                 </ul>
             </div>
-
             <div class="component-box">
                 <h3>Pelatihan dan Edukasi</h3>
                 <ul>
-                    <li>Pelatihan bagi pengurus pesantren terkait pengelolaan air bersih.</li>
-                    <li>Edukasi kepada santri tentang pentingnya kesehatan dan kebersihan air.</li>
+                    <li>Pelatihan bagi pengelola pesantren tentang manajemen air dan pemeliharaan infrastruktur.</li>
+                    <li>Edukasi tentang pentingnya kebersihan dan kesehatan air bagi santri.</li>
                 </ul>
             </div>
-
             <div class="component-box">
                 <h3>Monitoring dan Evaluasi</h3>
                 <ul>
-                    <li>Pengecekan rutin kualitas air untuk memastikan standar kesehatan tetap terjaga.</li>
-                    <li>Pemeliharaan berkala terhadap infrastruktur yang telah dibangun.</li>
+                    <li>Pembangunan sumur bor, tangki penampungan air, dan sistem distribusi air.</li>
+                    <li>Instalasi filter air dan teknologi pengolahan air untuk memastikan air yang dihasilkan memenuhi standar kesehatan.</li>
                 </ul>
             </div>
-
         </div>
     </section>
 
     <!-- HERO 2 -->
     <section class="hero1">
+        <img src="tgs.png" alt="">
         <nav>
             <a href="#">GREEN CAMPAIGN</a>
             <a href="#">PROGRAM</a>
@@ -344,10 +455,108 @@
         </nav>
     </section>
 
-    <!-- IMAGES -->
-    <section><img src="GREEN SYNDICATE_20251202_212445_0000.png" class="full-img"></section>
-    <section><img src="GREEN SYNDICATE_20251202_212510_0000.png" class="full-img"></section>
-    <section><img src="GREEN SYNDICATE_20251202_212545_0000.png" class="full-img"></section>
+    <!-- FULL IMAGES -->
+    <section><img src="GREEN SYNDICATE_20251202_212445_0000.png" class="full-img" alt=""></section>
+    <section><img src="GREEN SYNDICATE_20251202_212510_0000.png" class="full-img" alt=""></section>
+    <section><img src="GREEN SYNDICATE_20251202_212545_0000.png" class="full-img" alt=""></section>
 
+     <!-- SECTION OUR PARTNER -->
+    <section class="partner-section position-relative py-5 overflow-hidden">
+      <div class="container position-relative z-3">
+        <!-- Judul -->
+        <h2 class="text-white text-center fw-bold mb-5 display-3 partner-title">
+          OUR PARTNER
+        </h2>
+
+        <!-- Daftar Logo Partner -->
+        <div class="row justify-content-center align-items-end mb-4 g-4">
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ijobintang.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/alhasaniyah.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ponpesteluknaga.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ponpesmujtama.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/nadhlatululama.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/perhutani.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/mangroves.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/satyakarya.png" class="img-fluid partner-logo" alt=""></div>
+    </div>
+        
+    <div class="row justify-content-center align-items-start g-4">
+      <div class="col-3 col-sm-3 col-lg-1_5 offset-lg-0_5"><img src="assets/kemenag.png"  class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/gusdurian.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/alumni.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/pramuka.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/farmasi.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/lpn.png" class="img-fluid partner-logo" alt=""></div>
+      <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/sun.png" class="img-fluid partner-logo" alt=""></div>
+    </div>
+      </div>
+    </section>
+
+    <footer class="text-white py-5"
+            style="background: linear-gradient(135deg, #0b6f3a, #004d26); position:relative; z-index:2;">
+            <div class="container">
+                <div class="row">
+
+                    <!-- KIRI: Logo + Deskripsi Singkat -->
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <img src="santribuminav.png" alt="Santri Bumi" width="220" class="mb-3">
+                        <p class="mb-3" style="font-size:1.1rem; opacity:0.95;">
+                            <strong>SANTRI BUMI GREEN SYNDICATE</strong><br>
+                            Mengelola Sampah Menjadi Berkah
+                        </p>
+                        <p class="small opacity-80">
+                            Gerakan santri peduli lingkungan melalui pengelolaan sampah mandiri,
+                            pemberdayaan ekonomi, dan energi terbarukan.
+                        </p>
+                    </div>
+
+                    <!-- TENGAH: Menu Cepat -->
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <h5 class="fw-bold mb-3">MENU</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Green
+                                    Campaign</a>
+                            </li>
+                            <li class="mb-2"><a href="#about"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Tentang
+                                    Kami</a>
+                            </li>
+                            <li class="mb-2"><a href="#program"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Program</a>
+                            </li>
+                            <li class="mb-2"><a href="#flow"
+                                    class="text-white text-decoration-none opacity-90 hover-opacity-100">Work Flow</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- KANAN: Kontak + Donate Button -->
+                    <div class="col-lg-4">
+                        <h5 class="fw-bold mb-3">HUBUNGI KAMI</h5>
+                        <p class="mb-2">
+                            <strong>Email:</strong> info@santribumi.org<br>
+                            <strong>WhatsApp:</strong> +62 812-3456-7890
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg"
+                                style="background:#ffb300; border:none;">
+                                DONASI SEKARANG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garis Pemisah -->
+                <hr class="my-4 opacity-30">
+
+                <!-- Copyright -->
+                <div class="text-center small opacity-80">
+                    © 2025 Santri Bumi Green Syndicate. All rights reserved.
+                    <span class="mx-3">|</span>
+                    Dibuat dengan cinta untuk bumi yang lebih hijau
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
