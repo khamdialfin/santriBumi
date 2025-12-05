@@ -80,6 +80,28 @@
         border-radius: 12px;
         font-size: 0.95rem;
     }
+
+    /* OUR PARTNER SECTION – Background + Overlay */
+    .partner-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)),
+            url('assets/3.png') center/cover no-repeat fixed;
+        min-height: 90vh;
+        position: relative;
+        border-radius: 0px;
+        padding-left: 100px;
+    }
+
+    /* Supaya logo tetap putih & glowing */
+    .partner-logo {
+        max-height: 110px;
+        width: auto;
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+        transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover {
+        transform: translateY(-10px) scale(1.1)
+    }
 </style>
 
 <body>
@@ -317,6 +339,52 @@
                 </div>
             </section>
         </div>
+        <!-- SECTION OUR PARTNER -->
+        <section class="partner-section position-relative py-5 overflow-hidden">
+            <div class="container position-relative z-3">
+                <!-- Judul -->
+                <h2 class="text-white text-center fw-bold mb-5 display-3 partner-title">
+                    OUR PARTNER
+                </h2>
+
+                <!-- Daftar Logo Partner -->
+                <div class="row justify-content-center align-items-end mb-4 g-4">
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ijobintang.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/alhasaniyah.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ponpesteluknaga.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/ponpesmujtama.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/nadhlatululama.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/perhutani.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/mangroves.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/satyakarya.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                </div>
+
+                <div class="row justify-content-center align-items-start g-4">
+                    <div class="col-3 col-sm-3 col-lg-1_5 offset-lg-0_5"><img src="assets/kemenag.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/gusdurian.png"
+                            class="img-fluid partner-logo" alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/alumni.png" class="img-fluid partner-logo"
+                            alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/pramuka.png" class="img-fluid partner-logo"
+                            alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/farmasi.png" class="img-fluid partner-logo"
+                            alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/lpn.png" class="img-fluid partner-logo"
+                            alt=""></div>
+                    <div class="col-3 col-sm-3 col-lg-1_5"><img src="assets/sun.png" class="img-fluid partner-logo"
+                            alt=""></div>
+                </div>
+            </div>
+        </section>
         <!-- FOOTER -->
         <footer class="text-white py-5"
             style="background: linear-gradient(135deg, #0b6f3a, #004d26); position:relative; z-index:2;">
