@@ -104,6 +104,22 @@ section {
   box-shadow: 0 0px 0px rgba(0,0,0,0) !important;
 }
 
+.btn-donate-up {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(11, 111, 58, 0.5); 
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-donate-up:hover {
+  background-color: #00b856;
+  color: white;
+  border: white 1px solid;
+}
+
 /* Tombol DONATE NOW */
 .btn-donate {
   background-color: #00d66b;
@@ -121,18 +137,6 @@ section {
   border: slategrey 2px solid;
 }
 
-/* Responsif untuk mobile buat versi 
-hp 560px
-tab 768px x 1080px*/
-@media (max-width: 768px) {
-  .display-4 {
-    font-size: 2.2rem;
-  }
-  .card {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-}
 
 /* OUR PARTNER SECTION – Background + Overlay */
 .partner-section {
@@ -159,11 +163,142 @@ tab 768px x 1080px*/
 .offset-lg-0_5 { margin-left: 6%; }                         /* geser baris bawah biar pas tengah */
 
 /* Responsif mobile */
+/* ================================================================== */
+/*                     RESPONSIVE – SUDAH DIBERSIHKAN                 */
+/* ================================================================== */
+
+/* 1. Tablet & Mobile Umum (max-width: 992px) */
 @media (max-width: 992px) {
-  .col-lg-1_5 { flex: 0 0 20%; max-width: 20%; }
-  .offset-lg-0_5 { margin-left: 0; }
+  .col-lg-1_5 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
+  .offset-lg-0_5 {
+    margin-left: 0 !important;
+  }
+    .head-text-image {
+    width: 100% !important;
+    max-width: 200px !important;
+    margin-left: 0 !important;
+  }
 }
+
+/* 2. Tablet Portrait & Landscape kecil (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .custom-navbar {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    padding: 12px 0 !important;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+  .custom-navbar img {
+    width: 140px !important;
+  }
+  .custom-navbar .nav-link {
+    font-size: 14px;
+    padding: 8px 12px !important;
+  }
+  .btn-donate-up {
+    font-size: 13px;
+    padding: 6px 14px !important;
+  }
+
+  /* Home Section – headline */
+  #home .content-container img {
+    height: auto !important;
+    max-height: 320px;
+    width: 90%;
+  }
+
+  /* About Section */
+  .about-section img {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto 20px auto !important;
+  }
+  .about-text {
+    font-size: 14px;
+    text-align: center !important;
+    padding: 0 20px;
+  }
+  .btn-success {
+    display: block;
+    margin: 20px auto !important;
+  }
+
+  /* Section Donasi – judul & card */
+  .text-secondary.fs-5,
+  h1.fw-bold {
+    text-align: center !important;
+  }
+  /* 4 card jadi 2 kolom di 768px */
+  .row-cols-lg-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .program-card img {
+    height: 110px !important;
+  }
+  .card-text {
+    font-size: 11.5px !important;
+  }
+  .btn-donate {
+    font-size: 12px;
+    padding: 7px 16px !important;
+  }
+
+  /* Partner Section – 4 logo per baris */
+  .partner-section .row > div {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    margin-bottom: 35px;
+  }
+  .partner-logo {
+    max-height: 80px !important;
+  }
+  .partner-title {
+    font-size: 2.3rem !important;
+  }
+
+  /* Hilangkan horizontal scroll */
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* 3. Mobile Kecil (max-width: 576px) */
 @media (max-width: 576px) {
-  .col-3 { flex: 0 0 33.333%; max-width: 33.333%; }
-  .partner-logo { max-height: 80px; }
+  .custom-navbar img {
+    width: 120px !important;
+  }
+  #home .content-container img {
+    max-height: 240px;
+  }
+
+  /* Program card jadi 1 kolom */
+  .row-cols-lg-4 > .col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  /* Partner jadi 3 per baris */
+  .partner-section .row > div {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
+  .partner-logo {
+    max-height: 70px !important;
+  }
+  .partner-title {
+    font-size: 2rem !important;
+  }
 }

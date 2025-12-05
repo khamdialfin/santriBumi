@@ -60,7 +60,7 @@ body {
 
 .custom-navbar::after {
   content: "";
-  position: fixed;
+  position: absolute;
   bottom: 10px;        /* BIAR ADA SISA NAVBAR DI BAWAH GARIS */
   left: 50%;
   transform: translateX(-50%);
@@ -68,6 +68,8 @@ body {
   height: 3px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 50px;
+  pointer-events: none;     
+  z-index: -1;
 }
 
 /* Biar link warna tetap putih */
@@ -96,4 +98,144 @@ body {
   background-color: #00b856;
   color: white;
   border: white 1px solid;
+}
+
+/* OUR PARTNER SECTION – Background + Overlay */
+.partner-section {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+              url('assets/3.png') center/cover no-repeat fixed;
+  min-height: 90vh;
+  position: relative;
+  border-radius: 0px;
+}
+
+/* Supaya logo tetap putih & glowing */
+.partner-logo {
+  max-height: 110px;
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  transition: all 0.3s ease;
+}
+.partner-logo:hover {
+  transform: translateY(-10px) scale(1.1)
+}
+
+/* ================================================================== */
+/*                  RESPONSIF KHUSUS aksisantribumi.html               */
+/*           Tambahkan ini di paling bawah file style2.css            */
+/* ================================================================== */
+
+/* Navbar responsif */
+@media (max-width: 992px) {
+  .custom-navbar {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    padding: 12px 0 !important;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+  .custom-navbar img {
+    width: 150px !important;
+  }
+}
+
+/* Home section – headline tidak terlalu besar */
+@media (max-width: 768px) {
+  #home .content-container img {
+    height: auto !important;
+    max-height: 300px;
+    width: 90%;
+  }
+
+  /* Gambar teks program (kompenenprogram.png) */
+  img[src*="kompenenprogram.png"] {
+    width: 100% !important;
+    max-width: 380px;
+    height: auto;
+    display: block;
+    margin: 20px auto !important;
+  }
+
+  /* Teks about jadi tengah dan tidak meluber */
+  .about-text {
+    text-align: center !important;
+    padding: 0 20px;
+    font-size: 14.5px;
+    margin-left: 0 !important;
+  }
+
+  /* Tombol READ MORE jadi tengah */
+  .btn-success {
+    display: block;
+    margin: 20px auto !important;
+  }
+
+  /* Gambar di samping jadi full width */
+  #about .img-fluid {
+    margin-bottom: 25px;
+  }
+
+  /* Navbar logo lebih kecil */
+  .custom-navbar img {
+    width: 130px !important;
+  }
+
+  /* Hilangkan horizontal scroll */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Mobile kecil (≤576px) */
+@media (max-width: 576px) {
+  #home .content-container img {
+    max-height: 220px;
+  }
+
+  .custom-navbar img {
+    width: 110px !important;
+  }
+
+  img[src*="kompenenprogram.png"] {
+    max-width: 300px !important;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  /* Partner logo jadi 3 per baris */
+  .partner-section .row > div {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+    margin-bottom: 30px;
+  }
+  .partner-logo {
+    max-height: 70px !important;
+  }
+  .partner-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Partner section – pakai layout yang sama dengan halaman utama */
+@media (max-width: 992px) {
+  .col-lg-1_5 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+  }
+  .offset-lg-0_5 {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-section .row > div {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+  }
 }
