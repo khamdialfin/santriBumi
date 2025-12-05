@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Scroll Website</title>
+    <title>Aksi Santri Bumi</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,7 +12,6 @@
   </head>
 
   <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
       <div class="container">
         <img src="santribuminav.png" width="200" alt="logo" />
@@ -21,6 +20,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">GREEN CAMPAIGN</a>
+              <a class="nav-link" href="#menu">GREEN CAMPAIGN</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">PROGRAM</a>
+              <a class="nav-link" href="#about">PROGRAM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">ABOUT</a>
+              <a class="nav-link" href="#about2">ABOUT</a>
             </li>
             <li class="nav-item">
               <button class="btn btn-donate">DONATE</button>
@@ -93,7 +95,7 @@
       </div>
     </section>
 
-    <section id="about" class="about-section py-3">
+    <section id="about2" class="about-section py-3">
       <div class="container py-3">
         <div class="row align-items-center">
           <div class="col-md-6">
@@ -108,23 +110,233 @@
           <div class="col-md-6 mb-4">
             <p class="about-text mt-4 mx-4">
               Tujuan Program
-              <br> • Meningkatkan kesadaran dan partisipasi masyarakat
-              dalam upaya pelestarian lingkungan. 
-              <br> • Mengurangi dampak negatif dari
-              perubahan iklim melalui penghijauan dan konservasi. 
-              <br> • Membangun generasi muda yang peduli dan bertanggung jawab terhadap
-              lingkungan. 
-              <br> • Meningkatkan kualitas lingkungan hidup di daerah
-              perkotaan dan pedesaan. 
-              <br><br> Program AKSI SANTRIBUMI diharapkan dapat
-              memberikan dampak positif yang signifikan bagi kelestarian alam
-              dan kesejahteraan masyarakat, serta menjadi contoh inspiratif bagi
-              program-program lingkungan lainnya di seluruh Indonesia.
+              <br />
+              • Meningkatkan kesadaran dan partisipasi masyarakat dalam upaya
+              pelestarian lingkungan. <br />
+              • Mengurangi dampak negatif dari perubahan iklim melalui
+              penghijauan dan konservasi. <br />
+              • Membangun generasi muda yang peduli dan bertanggung jawab
+              terhadap lingkungan. <br />
+              • Meningkatkan kualitas lingkungan hidup di daerah perkotaan dan
+              pedesaan. <br /><br />
+              Program AKSI SANTRIBUMI diharapkan dapat memberikan dampak positif
+              yang signifikan bagi kelestarian alam dan kesejahteraan
+              masyarakat, serta menjadi contoh inspiratif bagi program-program
+              lingkungan lainnya di seluruh Indonesia.
             </p>
-
           </div>
         </div>
       </div>
     </section>
+
+    <section
+      id="partner"
+      class="partner-section position-relative py-5 overflow-hidden"
+    >
+      <div class="container position-relative z-3">
+        <!-- Judul -->
+        <h2 class="text-white text-center fw-bold mb-5 display-3 partner-title">
+          OUR PARTNER
+        </h2>
+
+        <!-- Daftar Logo Partner -->
+        <div class="row justify-content-center align-items-end mb-4 g-4">
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/ijobintang.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/alhasaniyah.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/ponpesteluknaga.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/ponpesmujtama.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/nadhlatululama.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/perhutani.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/mangroves.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/satyakarya.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-start g-4">
+          <div class="col-3 col-sm-3 col-lg-1_5 offset-lg-0_5">
+            <img
+              src="assets/kemenag.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/gusdurian.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/alumni.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/pramuka.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img
+              src="assets/farmasi.png"
+              class="img-fluid partner-logo"
+              alt=""
+            />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img src="assets/lpn.png" class="img-fluid partner-logo" alt="" />
+          </div>
+          <div class="col-3 col-sm-3 col-lg-1_5">
+            <img src="assets/sun.png" class="img-fluid partner-logo" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="text-white py-5"
+      style="
+        background: linear-gradient(135deg, #0b6f3a, #004d26);
+        position: relative;
+        z-index: 2;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <!-- KIRI: Logo + Deskripsi Singkat -->
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <img
+              src="santribuminav.png"
+              alt="Santri Bumi"
+              width="220"
+              class="mb-3"
+            />
+            <p class="mb-3" style="font-size: 1.1rem; opacity: 0.95">
+              <strong>SANTRI BUMI GREEN SYNDICATE</strong><br />
+              Mengelola Sampah Menjadi Berkah
+            </p>
+            <p class="small opacity-80">
+              Gerakan santri peduli lingkungan melalui pengelolaan sampah
+              mandiri, pemberdayaan ekonomi, dan energi terbarukan.
+            </p>
+          </div>
+
+          <!-- TENGAH: Menu Cepat -->
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5 class="fw-bold mb-3">MENU</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="text-white text-decoration-none opacity-90 hover-opacity-100"
+                  >Green Campaign</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#about"
+                  class="text-white text-decoration-none opacity-90 hover-opacity-100"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#program"
+                  class="text-white text-decoration-none opacity-90 hover-opacity-100"
+                  >Program</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#flow"
+                  class="text-white text-decoration-none opacity-90 hover-opacity-100"
+                  >Work Flow</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- KANAN: Kontak + Donate Button -->
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">HUBUNGI KAMI</h5>
+            <p class="mb-2">
+              <strong>Email:</strong> info@santribumi.org<br />
+              <strong>WhatsApp:</strong> +62 812-3456-7890
+            </p>
+            <div class="mt-4">
+              <a
+                href="#"
+                class="btn btn-warning btn-lg fw-bold px-5 py-3 rounded-pill shadow-lg"
+                style="background: #ffb300; border: none"
+              >
+                DONASI SEKARANG
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garis Pemisah -->
+        <hr class="my-4 opacity-30" />
+
+        <!-- Copyright -->
+        <div class="text-center small opacity-80">
+          © 2025 Santri Bumi Green Syndicate. All rights reserved.
+          <span class="mx-3">|</span>
+          Dibuat dengan cinta untuk bumi yang lebih hijau
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
